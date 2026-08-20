@@ -1,0 +1,101 @@
+/* Shared styles — Manisha Sunuwar portfolio (Malan-inspired minimal hub + detail pages) */
+:root {
+  --bg: #fbfaf7;
+  --ink: #1a1a17;
+  --ink-soft: #5b574e;
+  --line: #e4e0d8;
+  --accent: #7a1f1f;      /* understated academic maroon */
+  --accent-2: #2f6f5e;
+  --max: 760px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14130f;
+    --ink: #eceae3;
+    --ink-soft: #a29d93;
+    --line: #2c2a24;
+    --accent: #d98a8a;
+    --accent-2: #7fbfa9;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14130f;
+  --ink: #eceae3;
+  --ink-soft: #a29d93;
+  --line: #2c2a24;
+  --accent: #d98a8a;
+  --accent-2: #7fbfa9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 44px 22px 80px;
+}
+.wrap { max-width: var(--max); margin: 0 auto; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Masthead */
+.masthead { margin-bottom: 6px; }
+.home-of { color: var(--ink-soft); font-style: italic; font-size: .95rem; }
+h1.name { font-size: 2.5rem; font-weight: normal; letter-spacing: -.01em; line-height: 1.1; margin: 2px 0 6px; }
+.title { color: var(--ink); font-size: 1.05rem; }
+.title .org { color: var(--ink-soft); }
+.contact-line { color: var(--ink-soft); font-size: .95rem; margin-top: 8px; }
+.contact-line a { color: var(--accent); }
+.social { margin-top: 6px; font-size: .95rem; }
+.social a { color: var(--accent); margin-right: 14px; }
+
+/* Nav of hyperlinks (Malan-style) */
+.nav-links {
+  margin: 22px 0 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 1.02rem;
+  line-height: 2;
+}
+.nav-links a { margin-right: 4px; }
+.nav-links .sep { color: var(--line); margin: 0 8px; }
+
+/* Portrait */
+.portrait { margin: 26px 0 10px; }
+.portrait img { width: 190px; height: 190px; object-fit: cover; border: 1px solid var(--line); border-radius: 4px; display: block; }
+.portrait figcaption { color: var(--ink-soft); font-size: .82rem; font-style: italic; margin-top: 7px; }
+
+/* Chronological list on hub */
+.recent { margin-top: 30px; }
+.recent h2 { font-size: 1rem; font-weight: normal; font-style: italic; color: var(--ink-soft); margin-bottom: 12px; }
+.entry { margin-bottom: 15px; }
+.entry .date { color: var(--ink-soft); font-size: .9rem; }
+.entry .body { }
+
+/* Detail pages */
+.back { font-size: .95rem; color: var(--ink-soft); }
+.back a { color: var(--accent); }
+.page-title { font-size: 2rem; font-weight: normal; margin: 18px 0 6px; letter-spacing: -.01em; }
+.detail-nav { margin: 4px 0 26px; padding-bottom: 16px; border-bottom: 1px solid var(--line); font-size: .95rem; }
+.detail-nav a { margin-right: 4px; }
+.detail-nav .sep { color: var(--line); margin: 0 6px; }
+
+section.block { margin-bottom: 34px; }
+h2.sub { font-size: 1.3rem; font-weight: normal; margin-bottom: 4px; }
+h3.item { font-size: 1.12rem; font-weight: bold; margin: 20px 0 2px; }
+.meta { color: var(--ink-soft); font-size: .95rem; margin-bottom: 8px; }
+.meta .when { font-style: italic; }
+p { margin-bottom: 14px; }
+ul.bullets { margin: 8px 0 14px 22px; }
+ul.bullets li { margin-bottom: 7px; }
+.tagline { color: var(--ink-soft); font-size: .92rem; }
+.skills-block { margin-bottom: 18px; }
+.skills-block .label { font-weight: bold; }
+.divider { border: none; border-top: 1px solid var(--line); margin: 26px 0; }
+
+.footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .85rem; }
