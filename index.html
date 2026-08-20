@@ -8,72 +8,64 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header class="masthead">
+  <div class="wrap layout">
+
+    <!-- LEFT: name + vertical list of section titles -->
+    <aside class="sidebar">
+      <div class="home-of">home page of</div>
       <h1>Manisha Sunuwar</h1>
       <div class="role">Business Analyst</div>
       <div class="loc">Liverpool, United Kingdom</div>
-      <div class="links">
-        <button class="textbtn" type="button" data-cv>CV</button><span class="sep">·</span>
+      <div class="email"><a href="mailto:manishasunuwar303@gmail.com">manishasunuwar303@gmail.com</a></div>
+      <div class="social">
         <a href="https://www.linkedin.com/in/manisha-sunuwar/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
         <a href="https://github.com/manishasunuwar303" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
-        <a href="mailto:manishasunuwar303@gmail.com">Email</a>
+        <a href="https://linktr.ee/manishasunuwar" target="_blank" rel="noopener">Links</a>
       </div>
-    </header>
-  </div>
 
-  <nav class="site">
-    <div class="wrap">
-      <a href="#about">About</a><span class="sep">·</span>
-      <a href="#experience">Experience</a><span class="sep">·</span>
-      <a href="#projects">Projects</a><span class="sep">·</span>
-      <a href="#research">Research</a><span class="sep">·</span>
-      <a href="#education">Education</a><span class="sep">·</span>
-      <a href="#skills">Skills</a><span class="sep">·</span>
-      <a href="#volunteering">Volunteering</a><span class="sep">·</span>
-      <button class="textbtn" type="button" data-cv>CV</button><span class="sep">·</span>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+      <nav class="section-nav" id="nav">
+        <a href="#about" data-panel="about">About</a>
+        <a href="#brief" data-panel="brief">In Brief</a>
+        <a href="#experience" data-panel="experience">Experience</a>
+        <a href="#projects" data-panel="projects">Projects</a>
+        <a href="#research" data-panel="research">Research &amp; Analysis</a>
+        <a href="#education" data-panel="education">Education</a>
+        <a href="#skills" data-panel="skills">Skills</a>
+        <a href="#volunteering" data-panel="volunteering">Volunteering</a>
+        <a href="#writing" data-panel="writing">Writing &amp; Presentations</a>
+        <a href="#languages" data-panel="languages">Languages</a>
+        <button type="button" data-cv>CV</button>
+        <a href="#contact" data-panel="contact">Contact</a>
+      </nav>
+    </aside>
 
-  <main class="wrap">
+    <!-- RIGHT: detail of the selected section -->
+    <main class="main" id="main">
 
-    <!-- ABOUT -->
-    <section class="row" id="about">
-      <div class="label"><div class="title">About</div></div>
-      <div class="content">
+      <section class="panel" id="p-about">
+        <h2>About</h2>
         <p>I'm a recent graduate and early-career <strong>Business Analyst</strong> based in Liverpool. My interest sits where business needs meet evidence: gathering and documenting requirements, mapping processes, and helping teams make decisions grounded in data rather than assumption.</p>
         <p>My background spans retail operations, retail-technology delivery, and academic research. I've analysed sales and inventory data to improve store processes, worked inside Agile teams supporting technology clients, and completed an MSc dissertation using structured qualitative research. I work carefully, I document clearly, and I care about outcomes I can actually measure.</p>
         <p>I'm now looking to grow in a dedicated business-analysis role focused on <strong>process improvement</strong>, <strong>stakeholder analysis</strong>, and <strong>data-driven decision-making</strong>.</p>
-      </div>
-    </section>
+      </section>
 
-    <!-- IN BRIEF -->
-    <section class="row" id="brief">
-      <div class="label"><div class="title">In Brief</div><div class="sub">Most recent first</div></div>
-      <div class="content">
+      <section class="panel" id="p-brief">
+        <h2>In Brief · most recent first</h2>
         <ul class="brief">
           <li><span class="yr">2026</span><span class="txt">Pursuing Business Analyst roles; completed the IBM Business Analyst Professional Certificate.</span></li>
-          <li><span class="yr">2025</span><span class="txt">Completed MSc International Business Management; produced the <a href="#research">SMM Investment Analysis</a> business case from primary qualitative research.</span></li>
-          <li><span class="yr">2024</span><span class="txt">Built a process-improvement case study, <a href="#projects">redesigning in-store replenishment</a>.</span></li>
-          <li><span class="yr">2024–Present</span><span class="txt">Retail Assistant (business process analysis), <a href="#experience">Primark</a>, Liverpool.</span></li>
-          <li><span class="yr">2024–2025</span><span class="txt">Volunteer Language Mentor, <a href="#volunteering">MFL Mentoring</a>, Wales.</span></li>
-          <li><span class="yr">2022–2023</span><span class="txt">Digital Marketing Intern, <a href="#experience">Falcon Tech</a>, Kathmandu.</span></li>
-          <li><span class="yr">2020–2023</span><span class="txt">Data Specialist, <a href="#experience">Cloud Factory</a>, Kathmandu.</span></li>
+          <li><span class="yr">2025</span><span class="txt">Completed MSc International Business Management; produced the <a href="#research" data-panel="research">SMM Investment Analysis</a> business case.</span></li>
+          <li><span class="yr">2024</span><span class="txt">Built a process-improvement case study, <a href="#projects" data-panel="projects">redesigning in-store replenishment</a>.</span></li>
+          <li><span class="yr">2024–Present</span><span class="txt">Retail Assistant (business process analysis), <a href="#experience" data-panel="experience">Primark</a>, Liverpool.</span></li>
+          <li><span class="yr">2024–2025</span><span class="txt">Volunteer Language Mentor, <a href="#volunteering" data-panel="volunteering">MFL Mentoring</a>, Wales.</span></li>
+          <li><span class="yr">2022–2023</span><span class="txt">Digital Marketing Intern, <a href="#experience" data-panel="experience">Falcon Tech</a>, Kathmandu.</span></li>
+          <li><span class="yr">2020–2023</span><span class="txt">Data Specialist, <a href="#experience" data-panel="experience">Cloud Factory</a>, Kathmandu.</span></li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- EXPERIENCE -->
-    <section class="row" id="experience">
-      <div class="label"><div class="title">Experience</div><div class="sub">Most recent first</div></div>
-      <div class="content">
+      <section class="panel" id="p-experience">
+        <h2>Experience · most recent first</h2>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">Retail Assistant</span> — <span class="h-org">Primark</span>
-            <span class="h-date">2024–Present</span>
-            <span class="h-meta">Liverpool, United Kingdom</span>
-          </div>
+          <div class="head"><span class="h-title">Retail Assistant</span> — <span class="h-org">Primark</span><span class="h-date">2024–Present</span><span class="h-meta">Liverpool, United Kingdom</span></div>
           <ul>
             <li>Analysed sales and inventory data to forecast demand and define stock-optimisation requirements, contributing to a <strong>90%+ reduction in overstock</strong>.</li>
             <li>Supported data-backed operational adjustments as the department achieved a <strong>Top 5 ranking</strong> among all national stores.</li>
@@ -81,187 +73,101 @@
             <li>Recognised as <strong>Colleague of the Quarter</strong> for consistent performance in a fast-paced environment.</li>
           </ul>
         </div>
-
         <div class="entry">
-          <div class="head">
-            <span class="h-title">Digital Marketing Intern</span> — <span class="h-org">Falcon Tech</span>
-            <span class="h-date">2022–2023</span>
-            <span class="h-meta">Kathmandu, Nepal</span>
-          </div>
-          <p>Internship with a digital marketing agency. Created social-media content — short-form video, educational carousels, and copy — for the agency's brand channel, and presented on camera. See <a href="#writing">Writing &amp; Presentations</a> for samples.</p>
+          <div class="head"><span class="h-title">Digital Marketing Intern</span> — <span class="h-org">Falcon Tech</span><span class="h-date">2022–2023</span><span class="h-meta">Kathmandu, Nepal</span></div>
+          <p>Internship with a digital marketing agency. Created social-media content — short-form video, educational carousels, and copy — for the agency's brand channel, and presented on camera. See <a href="#writing" data-panel="writing">Writing &amp; Presentations</a> for samples.</p>
         </div>
-
         <div class="entry">
-          <div class="head">
-            <span class="h-title">Data Specialist</span> — <span class="h-org">Cloud Factory</span>
-            <span class="h-date">2020–2023</span>
-            <span class="h-meta">Kathmandu, Nepal</span>
-          </div>
+          <div class="head"><span class="h-title">Data Specialist</span> — <span class="h-org">Cloud Factory</span><span class="h-date">2020–2023</span><span class="h-meta">Kathmandu, Nepal</span></div>
           <p>Worked within Agile teams across the full delivery lifecycle for retail-technology clients (including Ibotta and Pathr.ai), translating client needs into prioritised work and maintaining <strong>98% accuracy</strong> in complex data-processing workflows.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROJECTS -->
-    <section class="row" id="projects">
-      <div class="label"><div class="title">Projects</div><div class="sub">Selected work</div></div>
-      <div class="content">
+      <section class="panel" id="p-projects">
+        <h2>Projects · selected work</h2>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">Redesigning In-Store Replenishment</span>
-            <span class="h-date">2024</span>
-            <span class="h-meta">Process-improvement case study</span>
-          </div>
+          <div class="head"><span class="h-title">Redesigning In-Store Replenishment</span><span class="h-date">2024</span><span class="h-meta">Process-improvement case study</span></div>
           <p>Reframed a shelf-availability problem as an information gap rather than a staffing shortfall, and designed a data-led, system-guided replenishment process using existing handheld terminals.</p>
-          <div class="links-line">
-            <button class="textbtn" type="button" data-project="replenishment">View Project →</button>
-          </div>
+          <div class="links-line"><button class="textbtn" type="button" data-project="replenishment">View Project →</button></div>
         </div>
-
         <div class="entry">
-          <div class="head">
-            <span class="h-title">Healthcare Patient Information Management</span>
-            <span class="h-date">2024</span>
-            <span class="h-meta">Business-analysis case study</span>
-          </div>
+          <div class="head"><span class="h-title">Healthcare Patient Information Management</span><span class="h-date">2024</span><span class="h-meta">Business-analysis case study</span></div>
           <p>Designed an end-to-end solution to centralise fragmented patient records, using Agile artefacts and process mapping to improve workflow efficiency and data compliance.</p>
-          <div class="links-line">
-            <button class="textbtn" type="button" data-project="healthcare">View Project →</button>
-          </div>
+          <div class="links-line"><button class="textbtn" type="button" data-project="healthcare">View Project →</button></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- RESEARCH & ANALYSIS -->
-    <section class="row" id="research">
-      <div class="label"><div class="title">Research &amp; Analysis</div><div class="sub">Academic &amp; independent</div></div>
-      <div class="content">
+      <section class="panel" id="p-research">
+        <h2>Research &amp; Analysis · academic &amp; independent</h2>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">SMM Investment Analysis</span>
-            <span class="h-date">2025</span>
-            <span class="h-meta">Business case · primary qualitative research</span>
-          </div>
-          <p>A stakeholder-ready business case evaluating whether increased social-media marketing investment is justified by evidence of purchase behaviour. Built from <strong>14 semi-structured interviews</strong> with UK users (19–39), analysed through <strong>thematic analysis in NVivo</strong>. Identified four decision-driving themes and recommended a refined, platform-specific strategy with capped ad frequency.</p>
-          <div class="links-line">
-            <button class="textbtn" type="button" data-project="smm">View Details →</button>
-          </div>
+          <div class="head"><span class="h-title">SMM Investment Analysis</span><span class="h-date">2025</span><span class="h-meta">Business case · primary qualitative research</span></div>
+          <p>A stakeholder-ready business case evaluating whether increased social-media marketing investment is justified by evidence of purchase behaviour. Built from <strong>14 semi-structured interviews</strong> with UK users (19–39), analysed through <strong>thematic analysis in NVivo</strong>. Identified four decision-driving themes and recommended a refined, platform-specific strategy.</p>
+          <div class="links-line"><button class="textbtn" type="button" data-project="smm">View Details →</button></div>
         </div>
-
         <div class="entry">
-          <div class="head">
-            <span class="h-title">MSc Dissertation</span>
-            <span class="h-date">2025</span>
-            <span class="h-meta">Wrexham University</span>
-          </div>
+          <div class="head"><span class="h-title">MSc Dissertation</span><span class="h-date">2025</span><span class="h-meta">Wrexham University</span></div>
           <p>Independent research using structured interviews, data analysis, and insight-driven reporting — the foundation later reworked into the SMM business case above.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EDUCATION -->
-    <section class="row" id="education">
-      <div class="label"><div class="title">Education</div><div class="sub">Most recent first</div></div>
-      <div class="content">
+      <section class="panel" id="p-education">
+        <h2>Education · most recent first</h2>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">MSc International Business Management</span>
-            <span class="h-date">2025</span>
-            <span class="h-meta">Wrexham University · Wrexham, Wales</span>
-          </div>
+          <div class="head"><span class="h-title">MSc International Business Management</span><span class="h-date">2025</span><span class="h-meta">Wrexham University · Wrexham, Wales</span></div>
           <p>Corporate strategy, financial and accounting analysis for business decisions, and market and brand analysis. Dissertation based on structured interviews and qualitative data analysis.</p>
         </div>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">BSc (Hons) Information Technology</span>
-            <span class="h-date">2023</span>
-            <span class="h-meta">Nilai University · Kathmandu, Nepal</span>
-          </div>
+          <div class="head"><span class="h-title">BSc (Hons) Information Technology</span><span class="h-date">2023</span><span class="h-meta">Nilai University · Kathmandu, Nepal</span></div>
           <p>Database systems, information-systems management, ERP, software analysis and design, and cloud architecture.</p>
         </div>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">IBM Business Analyst Professional Certificate</span>
-            <span class="h-date">2026</span>
-            <span class="h-meta">Certification</span>
-          </div>
+          <div class="head"><span class="h-title">IBM Business Analyst Professional Certificate</span><span class="h-date">2026</span><span class="h-meta">Certification</span></div>
           <p>Requirements gathering, process modelling, stakeholder engagement, data analysis, and dashboards.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section class="row" id="skills">
-      <div class="label"><div class="title">Skills</div></div>
-      <div class="content">
+      <section class="panel" id="p-skills">
+        <h2>Skills</h2>
         <div class="grouping"><span class="g-label">Business Analysis</span><br/><span class="g-items">Requirements analysis · Process mapping (As-Is / To-Be) · Gap analysis · Stakeholder analysis · Solution design</span></div>
         <div class="grouping"><span class="g-label">Research &amp; Analysis</span><br/><span class="g-items">Qualitative interviews · Thematic analysis · NVivo · Business-case development</span></div>
         <div class="grouping"><span class="g-label">Data</span><br/><span class="g-items">Excel · Power BI · Data analysis · Data quality · KPI reporting</span></div>
         <div class="grouping"><span class="g-label">Process Improvement</span><br/><span class="g-items">Root-cause analysis · Workflow analysis · Operational improvement</span></div>
         <div class="grouping"><span class="g-label">Tools &amp; Delivery</span><br/><span class="g-items">JIRA · Confluence · MS Visio · Agile (user stories, sprint planning, backlog)</span></div>
-      </div>
-    </section>
+      </section>
 
-    <!-- VOLUNTEERING -->
-    <section class="row" id="volunteering">
-      <div class="label"><div class="title">Volunteering</div></div>
-      <div class="content">
+      <section class="panel" id="p-volunteering">
+        <h2>Volunteering</h2>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">Language Mentor</span> — <span class="h-org">MFL Mentoring</span>
-            <span class="h-date">2024–2025</span>
-            <span class="h-meta">Wales, United Kingdom</span>
-          </div>
+          <div class="head"><span class="h-title">Language Mentor</span> — <span class="h-org">MFL Mentoring</span><span class="h-date">2024–2025</span><span class="h-meta">Wales, United Kingdom</span></div>
           <p>Volunteered on a Welsh-Government-funded programme promoting multilingualism, mentoring Year 7–9 learners through sessions that connect languages to their future study and careers.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- WRITING & PRESENTATIONS -->
-    <section class="row" id="writing">
-      <div class="label"><div class="title">Writing &amp; Presentations</div><div class="sub">Public content, Falcon Tech</div></div>
-      <div class="content">
+      <section class="panel" id="p-writing">
+        <h2>Writing &amp; Presentations · public content, Falcon Tech</h2>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">"How to Improve as a Graphic Designer"</span>
-            <span class="h-date">2023</span>
-            <span class="h-meta">Educational carousel</span>
-          </div>
+          <div class="head"><span class="h-title">"How to Improve as a Graphic Designer"</span><span class="h-date">2023</span><span class="h-meta">Educational carousel</span></div>
           <p>Design and copywriting for an educational carousel aimed at aspiring designers.</p>
           <div class="links-line"><a href="https://www.instagram.com/p/Cu6bPSGxSsg/?img_index=1" target="_blank" rel="noopener">View on Instagram →</a></div>
         </div>
         <div class="entry">
-          <div class="head">
-            <span class="h-title">"Things To Do After Posting"</span>
-            <span class="h-date">2022</span>
-            <span class="h-meta">On-camera short-form video</span>
-          </div>
+          <div class="head"><span class="h-title">"Things To Do After Posting"</span><span class="h-date">2022</span><span class="h-meta">On-camera short-form video</span></div>
           <p>Scripted and presented a social-media tips reel on improving audience engagement.</p>
           <div class="links-line"><a href="https://www.instagram.com/falcontechnepal/reel/ClBF3lFDA8V/" target="_blank" rel="noopener">View on Instagram →</a></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- LANGUAGES -->
-    <section class="row" id="languages">
-      <div class="label"><div class="title">Languages</div></div>
-      <div class="content">
+      <section class="panel" id="p-languages">
+        <h2>Languages</h2>
         <ul class="plainlist">
           <li><span class="lang">English</span> — <span class="lvl">Professional</span></li>
           <li><span class="lang">Nepali</span> — <span class="lvl">Native</span></li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section class="row" id="contact">
-      <div class="label"><div class="title">Contact</div></div>
-      <div class="content">
-        <p>
-          Manisha Sunuwar<br/>
-          Liverpool, United Kingdom<br/>
-          <a href="mailto:manishasunuwar303@gmail.com">manishasunuwar303@gmail.com</a>
-        </p>
+      <section class="panel" id="p-contact">
+        <h2>Contact</h2>
+        <p>Manisha Sunuwar<br/>Liverpool, United Kingdom<br/><a href="mailto:manishasunuwar303@gmail.com">manishasunuwar303@gmail.com</a></p>
         <p class="links-line" style="margin-top:0">
           <a href="https://www.linkedin.com/in/manisha-sunuwar/" target="_blank" rel="noopener">LinkedIn →</a>
           <a href="https://github.com/manishasunuwar303" target="_blank" rel="noopener">GitHub →</a>
@@ -270,10 +176,10 @@
           <a href="https://www.tiktok.com/@manishasunuwar" target="_blank" rel="noopener">TikTok →</a>
           <a href="https://linktr.ee/manishasunuwar" target="_blank" rel="noopener">All links →</a>
         </p>
-      </div>
-    </section>
+      </section>
 
-  </main>
+    </main>
+  </div>
 
   <footer class="site">
     <div class="wrap">© <span id="yr"></span> Manisha Sunuwar · Liverpool, United Kingdom · <button class="textbtn" type="button" data-cv>Download CV</button></div>
@@ -283,18 +189,16 @@
   <div hidden>
     <div id="tpl-replenishment" data-title="Redesigning In-Store Replenishment" data-meta="2024 · Process-improvement case study">
       <div class="pblock"><h4>Objective</h4><p>Understand why shelf availability was inconsistent at a national fast-fashion retailer, and design a practical fix — without assuming the problem was simply too few staff.</p></div>
-      <div class="pblock"><h4>Approach</h4><ul><li>Analysed the situation and reframed the root cause as an <strong>information gap</strong>, not a resourcing shortfall.</li><li>Mapped the current (As-Is) replenishment workflow and designed a To-Be process.</li><li>Defined requirements to prioritise pick tasks by sales velocity using existing handheld terminals, surfacing exact stockroom bin locations.</li><li>Wrote user stories with acceptance criteria for the system-guided solution.</li></ul></div>
+      <div class="pblock"><h4>Approach</h4><ul><li>Reframed the root cause as an <strong>information gap</strong>, not a resourcing shortfall.</li><li>Mapped the current (As-Is) replenishment workflow and designed a To-Be process.</li><li>Defined requirements to prioritise pick tasks by sales velocity using existing handheld terminals.</li><li>Wrote user stories with acceptance criteria for the system-guided solution.</li></ul></div>
       <div class="pblock"><h4>Tools &amp; Methods</h4><p>Root-cause analysis · Process mapping (As-Is / To-Be) · Requirements engineering · User-story mapping &amp; acceptance criteria · Stakeholder analysis.</p></div>
       <div class="pblock"><h4>Outcome</h4><ul><li>Targeted cutting replenishment cycle times by more than half.</li><li>Aimed to improve peak-hour shelf availability from 92% to 98%.</li><li>Reduced stockroom overstock through smarter, data-backed reordering.</li></ul><p class="p-meta" style="margin-top:8px">Presented as a structured case study; figures are project targets based on the analysis.</p></div>
     </div>
-
     <div id="tpl-healthcare" data-title="Healthcare Patient Information Management" data-meta="2024 · Business-analysis case study">
       <div class="pblock"><h4>Objective</h4><p>Centralise fragmented patient records to improve clinical workflow efficiency and data compliance.</p></div>
       <div class="pblock"><h4>Approach</h4><ul><li>Applied Agile methodology to build a product backlog.</li><li>Documented technical requirements and functional user stories for secure, role-based access.</li><li>Mapped the patient journey to reduce administrative processing time and data-entry errors.</li></ul></div>
       <div class="pblock"><h4>Tools &amp; Methods</h4><p>Agile · Product backlog · User stories · Process mapping · Requirements documentation.</p></div>
       <div class="pblock"><h4>Outcome</h4><p>An end-to-end solution design with a prioritised backlog and mapped To-Be patient journey, structured for secure role-based access.</p></div>
     </div>
-
     <div id="tpl-smm" data-title="SMM Investment Analysis" data-meta="2025 · Business case · primary qualitative research">
       <div class="pblock"><h4>Objective</h4><p>Determine whether continued and increased social-media marketing investment is justified by real evidence of how platforms influence purchase behaviour.</p></div>
       <div class="pblock"><h4>Approach</h4><ul><li>Conducted <strong>14 semi-structured interviews</strong> with active UK social-media users aged 19–39.</li><li>Analysed transcripts using <strong>thematic analysis</strong> in NVivo.</li><li>Translated findings into a stakeholder-ready business case with options appraisal.</li></ul></div>
@@ -319,12 +223,34 @@
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
 
+    /* ---- Two-pane panel switching ---- */
+    var navEl = document.getElementById('nav');
+    var navLinks = Array.prototype.slice.call(navEl.querySelectorAll('a[data-panel]'));
+    function showPanel(id, updateHash) {
+      var target = document.getElementById('p-' + id);
+      if (!target) return;
+      document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+      target.classList.add('active');
+      navLinks.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-panel') === id); });
+      if (updateHash) history.replaceState(null, '', '#' + id);
+      document.getElementById('main').scrollIntoView({ block: 'nearest' });
+    }
+    // Any element with data-panel (nav or inline cross-links) switches panels
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('[data-panel]');
+      if (link) { e.preventDefault(); showPanel(link.getAttribute('data-panel'), true); return; }
+    });
+    // Initial panel from hash, default About
+    var initial = (location.hash || '#about').replace('#', '');
+    if (!document.getElementById('p-' + initial)) initial = 'about';
+    showPanel(initial, false);
+
+    /* ---- Modals (CV + projects) ---- */
     var CV_PATH = 'assets/Manisha-Sunuwar-CV.pdf';
     var modal = document.getElementById('modal');
     var modalBody = document.getElementById('modalBody');
     var modalTitle = document.getElementById('modalTitle');
     var modalActions = document.getElementById('modalActions');
-
     function openModal(title, actionsHTML, bodyHTML, pdf) {
       modalTitle.textContent = title;
       modalActions.innerHTML = actionsHTML || '';
@@ -333,12 +259,7 @@
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
-    function closeModal() {
-      modal.classList.remove('open');
-      modalBody.innerHTML = '';
-      document.body.style.overflow = '';
-    }
-
+    function closeModal() { modal.classList.remove('open'); modalBody.innerHTML = ''; document.body.style.overflow = ''; }
     function openCV() {
       var actions = '<a href="' + CV_PATH + '" download>Download</a>' +
                     '<a href="' + CV_PATH + '" target="_blank" rel="noopener">Open in New Tab</a>';
@@ -346,15 +267,11 @@
                  '<div class="pdf-fallback">Can’t see the CV? <a href="' + CV_PATH + '" target="_blank" rel="noopener">Open it in a new tab</a> or <a href="' + CV_PATH + '" download>download it</a>.</div>';
       openModal('Curriculum Vitae', actions, body, true);
     }
-
     function openProject(id) {
       var tpl = document.getElementById('tpl-' + id);
       if (!tpl) return;
-      var meta = tpl.getAttribute('data-meta');
-      var body = '<div class="p-meta">' + meta + '</div>' + tpl.innerHTML;
-      openModal(tpl.getAttribute('data-title'), '', body, false);
+      openModal(tpl.getAttribute('data-title'), '', '<div class="p-meta">' + tpl.getAttribute('data-meta') + '</div>' + tpl.innerHTML, false);
     }
-
     document.addEventListener('click', function (e) {
       var t = e.target.closest('[data-cv],[data-project],[data-close]');
       if (!t) { if (e.target === modal) closeModal(); return; }
