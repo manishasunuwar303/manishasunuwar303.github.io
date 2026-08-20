@@ -159,24 +159,18 @@ languages and cultures and see their relevance to future study and careers.
 
 ## 🛠️ About This Repository
 
-A lightweight, dependency-free portfolio site inspired by the minimal academic homepage
-format: a clean landing page (`index.html`) that links out to a detail page per section.
-Shared styling lives in one `styles.css`, and it adapts automatically to light and dark mode.
+A lightweight, dependency-free single-page personal archive in a minimalist editorial
+style (left-label / right-content rows, most-recent-first chronology). CV and project
+details open in-page as modals. Styling lives in one `styles.css`; it adapts automatically
+to light and dark mode.
 
 ```
-├── index.html          # minimal landing hub
-├── bio.html            # my story
-├── education.html      # degrees & certification
-├── skills.html         # core skills
-├── experience.html     # work history + work samples
-├── projects.html       # personal projects
-├── volunteering.html   # MFL Mentoring
-├── additional.html     # languages & details
-├── contact.html        # contact
-├── styles.css          # shared styles
+├── index.html                     # the single-page site
+├── styles.css                     # styles
 ├── assets/
-│   └── manisha.png     # portrait
-└── README.md           # you are here
+│   ├── manisha.png                # portrait
+│   └── Manisha-Sunuwar-CV.pdf     # CV (opens in modal / downloadable)
+└── README.md                      # you are here
 ```
 
 **Run it locally:**
