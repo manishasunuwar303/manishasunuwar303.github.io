@@ -33,6 +33,8 @@
         <a href="#skills" data-panel="skills">Skills</a>
         <a href="#volunteering" data-panel="volunteering">Volunteering</a>
         <a href="#writing" data-panel="writing">Writing &amp; Presentations</a>
+        <a href="#videos" data-panel="videos">Videos</a>
+        <a href="#photos" data-panel="photos">Photos</a>
         <a href="#languages" data-panel="languages">Languages</a>
         <button type="button" data-cv>CV</button>
         <a href="#contact" data-panel="contact">Contact</a>
@@ -157,6 +159,50 @@
         </div>
       </section>
 
+      <section class="panel" id="p-videos">
+        <h2>Videos · most recent first</h2>
+        <div class="entry">
+          <div class="head"><span class="h-title">Mistakes That Could Cost International Students £15,000</span><span class="h-date">2025</span><span class="h-meta">TikTok · career &amp; student tips</span></div>
+          <p>Short-form video on avoiding costly mistakes for international students moving to the UK.</p>
+          <div class="links-line">
+            <button class="textbtn" type="button" data-video="portrait" data-embed="https://www.tiktok.com/embed/v2/7574087210316614934" data-title="Mistakes That Could Cost International Students £15,000">Watch →</button>
+            <a href="https://www.tiktok.com/@manishasunuwar2056/video/7574087210316614934" target="_blank" rel="noopener">Open on TikTok →</a>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="head"><span class="h-title">Life of an International Student in England</span><span class="h-date">2025</span><span class="h-meta">YouTube · student life</span></div>
+          <p>A day-in-the-life vlog on studying and living in England as an international student.</p>
+          <div class="links-line">
+            <button class="textbtn" type="button" data-video="wide" data-embed="https://www.youtube.com/embed/mtg4Ib6Q260" data-title="Life of an International Student in England">Watch →</button>
+            <a href="https://www.youtube.com/watch?v=mtg4Ib6Q260" target="_blank" rel="noopener">Open on YouTube →</a>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="head"><span class="h-title">Reel</span><span class="h-date">2023</span><span class="h-meta">Instagram · short-form video</span></div>
+          <p>Short-form video content on Instagram.</p>
+          <div class="links-line">
+            <button class="textbtn" type="button" data-video="portrait" data-embed="https://www.instagram.com/p/CpUkoj6JPmv/embed" data-title="Instagram Reel">Watch →</button>
+            <a href="https://www.instagram.com/p/CpUkoj6JPmv/" target="_blank" rel="noopener">Open on Instagram →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="p-photos">
+        <h2>Photos</h2>
+        <div class="photo-grid">
+          <figure>
+            <img src="assets/manisha.png" alt="Portrait of Manisha Sunuwar" data-photo="assets/manisha.png" data-caption="Manisha Sunuwar" />
+            <figcaption>Portrait</figcaption>
+          </figure>
+          <!-- GRADUATION PHOTO: save the image to assets/graduation.jpg, then uncomment this block
+          <figure>
+            <img src="assets/graduation.jpg" alt="Manisha Sunuwar at graduation, Wrexham University" data-photo="assets/graduation.jpg" data-caption="Graduation — Wrexham University" />
+            <figcaption>Graduation — Wrexham University</figcaption>
+          </figure>
+          -->
+        </div>
+      </section>
+
       <section class="panel" id="p-languages">
         <h2>Languages</h2>
         <ul class="plainlist">
@@ -272,11 +318,24 @@
       if (!tpl) return;
       openModal(tpl.getAttribute('data-title'), '', '<div class="p-meta">' + tpl.getAttribute('data-meta') + '</div>' + tpl.innerHTML, false);
     }
+    function openVideo(btn) {
+      var portrait = btn.getAttribute('data-video') === 'portrait';
+      var src = btn.getAttribute('data-embed');
+      var body = '<div class="video-wrap' + (portrait ? ' portrait' : '') + '">' +
+                 '<iframe src="' + src + '" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+      openModal(btn.getAttribute('data-title') || 'Video', '', body, false);
+    }
+    function openImage(src, caption) {
+      var actions = '<a href="' + src + '" target="_blank" rel="noopener">Open in New Tab</a>';
+      openModal(caption || 'Photo', actions, '<img class="full-photo" src="' + src + '" alt="' + (caption || '') + '" />', false);
+    }
     document.addEventListener('click', function (e) {
-      var t = e.target.closest('[data-cv],[data-project],[data-close]');
+      var t = e.target.closest('[data-cv],[data-project],[data-video],[data-photo],[data-close]');
       if (!t) { if (e.target === modal) closeModal(); return; }
       if (t.hasAttribute('data-cv')) { e.preventDefault(); openCV(); }
       else if (t.hasAttribute('data-project')) { e.preventDefault(); openProject(t.getAttribute('data-project')); }
+      else if (t.hasAttribute('data-video')) { e.preventDefault(); openVideo(t); }
+      else if (t.hasAttribute('data-photo')) { e.preventDefault(); openImage(t.getAttribute('data-photo'), t.getAttribute('data-caption')); }
       else if (t.hasAttribute('data-close')) { closeModal(); }
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
